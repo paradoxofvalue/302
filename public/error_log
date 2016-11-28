@@ -1,0 +1,8 @@
+[28-Nov-2016 17:07:00 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/vlovecom/public_html/302/app/Http/Controllers/LA/NewModulesController.php on line 49
+[28-Nov-2016 17:07:03 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/vlovecom/public_html/302/app/Http/Controllers/LA/NewModulesController.php on line 49
+[28-Nov-2016 17:07:15 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/vlovecom/public_html/302/app/Http/Controllers/LA/NewModulesController.php on line 49
+[28-Nov-2016 17:16:34 UTC] PHP Parse error:  syntax error, unexpected '9' (T_LNUMBER), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/vlovecom/public_html/302/app/Http/Controllers/LA/NewModulesController.php on line 49
+[28-Nov-2016 17:16:41 UTC] PHP Parse error:  syntax error, unexpected ''9'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/vlovecom/public_html/302/app/Http/Controllers/LA/NewModulesController.php on line 49
+[28-Nov-2016 17:24:37 UTC] PHP Parse error:  syntax error, unexpected 'box' (T_STRING), expecting ',' or ';' in /home/vlovecom/public_html/302/app/Http/Controllers/LA/NewModulesController.php on line 52
+[28-Nov-2016 17:35:39 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/vlovecom/public_html/302/storage/framework/views/bacaa9222c89b81fe20150ee4dd86747cc4c75d9.php on line 26
+[28-Nov-2016 17:35:56 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/vlovecom/public_html/302/storage/framework/views/bacaa9222c89b81fe20150ee4dd86747cc4c75d9.php on line 26
