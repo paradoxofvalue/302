@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /vendor
 !/vendor/dwij
 /node_modules
@@ -5,3 +6,12 @@
 Homestead.yaml
 Homestead.json
 .idea/
+=======
+/vendor
+!/vendor/dwij
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+.idea/
+>>>>>>> f0d79ddccdacee29204f8fcb8a1dbae9dff816e8
