@@ -1,12 +1,12 @@
 <?php
 
 /* ================== Homepage ================== */
-Route::get('/', 'HomeController@index');
+Route::get('/oldhome', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 Route::auth();
 
 /* ================== custom ==================== */
-Route::get('/newmodule', 'CustomController@index');
+Route::get('/', 'CustomController@index');
 
 /* ================== Access Uploaded Files ================== */
 Route::get('files/{hash}/{name}', 'LA\UploadsController@get_file');
@@ -77,4 +77,65 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== NewModules ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/newmodules', 'LA\NewModulesController');
 	Route::get(config('laraadmin.adminRoute') . '/newmodule_dt_ajax', 'LA\NewModulesController@dtajax');
+
+	/* ================== Landing_headers ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/landing_headers', 'LA\Landing_headersController');
+	Route::get(config('laraadmin.adminRoute') . '/landing_header_dt_ajax', 'LA\Landing_headersController@dtajax');
+
+	/* ================== FirstBlockHeaders ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/firstblockheaders', 'LA\FirstBlockHeadersController');
+	Route::get(config('laraadmin.adminRoute') . '/firstblockheader_dt_ajax', 'LA\FirstBlockHeadersController@dtajax');
+
+	/* ================== FirstBlockLists ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/firstblocklists', 'LA\FirstBlockListsController');
+	Route::get(config('laraadmin.adminRoute') . '/firstblocklist_dt_ajax', 'LA\FirstBlockListsController@dtajax');
+
+	/* ================== SecondBlockHeaders ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/secondblockheaders', 'LA\SecondBlockHeadersController');
+	Route::get(config('laraadmin.adminRoute') . '/secondblockheader_dt_ajax', 'LA\SecondBlockHeadersController@dtajax');
+
+	/* ================== SecondBlockLists ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/secondblocklists', 'LA\SecondBlockListsController');
+	Route::get(config('laraadmin.adminRoute') . '/secondblocklist_dt_ajax', 'LA\SecondBlockListsController@dtajax');
+
+	/* ================== ThirdBlockHeaders ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/thirdblockheaders', 'LA\ThirdBlockHeadersController');
+	Route::get(config('laraadmin.adminRoute') . '/thirdblockheader_dt_ajax', 'LA\ThirdBlockHeadersController@dtajax');
+
+	/* ================== ThirdBlockLists ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/thirdblocklists', 'LA\ThirdBlockListsController');
+	Route::get(config('laraadmin.adminRoute') . '/thirdblocklist_dt_ajax', 'LA\ThirdBlockListsController@dtajax');
+
+	/* ================== ThirdBlockLinks ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/thirdblocklinks', 'LA\ThirdBlockLinksController');
+	Route::get(config('laraadmin.adminRoute') . '/thirdblocklink_dt_ajax', 'LA\ThirdBlockLinksController@dtajax');
+
+
+	/* ================== FourthBlockHeaders ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/fourthblockheaders', 'LA\FourthBlockHeadersController');
+	Route::get(config('laraadmin.adminRoute') . '/fourthblockheader_dt_ajax', 'LA\FourthBlockHeadersController@dtajax');
+
+	/* ================== FourthBlockLists ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/fourthblocklists', 'LA\FourthBlockListsController');
+	Route::get(config('laraadmin.adminRoute') . '/fourthblocklist_dt_ajax', 'LA\FourthBlockListsController@dtajax');
+
+	/* ================== FourthBlockLasts ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/fourthblocklasts', 'LA\FourthBlockLastsController');
+	Route::get(config('laraadmin.adminRoute') . '/fourthblocklast_dt_ajax', 'LA\FourthBlockLastsController@dtajax');
+
+	/* ================== FifthBlockHeaders ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/fifthblockheaders', 'LA\FifthBlockHeadersController');
+	Route::get(config('laraadmin.adminRoute') . '/fifthblockheader_dt_ajax', 'LA\FifthBlockHeadersController@dtajax');
+
+	/* ================== FifthBlockLists ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/fifthblocklists', 'LA\FifthBlockListsController');
+	Route::get(config('laraadmin.adminRoute') . '/fifthblocklist_dt_ajax', 'LA\FifthBlockListsController@dtajax');
+
+	/* ================== SixthBlockHeaders ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/sixthblockheaders', 'LA\SixthBlockHeadersController');
+	Route::get(config('laraadmin.adminRoute') . '/sixthblockheader_dt_ajax', 'LA\SixthBlockHeadersController@dtajax');
+
+	/* ================== SixthBlockLists ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/sixthblocklists', 'LA\SixthBlockListsController');
+	Route::get(config('laraadmin.adminRoute') . '/sixthblocklist_dt_ajax', 'LA\SixthBlockListsController@dtajax');
 });
