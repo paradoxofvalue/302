@@ -19,3 +19,6 @@
 [01-Dec-2016 22:09:37 UTC] PHP Fatal error:  Class 'App\Http\Controllers\SixthBlockHeader' not found in /home/vlovecom/public_html/302/local/app/Http/Controllers/CustomController.php on line 40
 [01-Dec-2016 22:10:16 UTC] PHP Fatal error:  Class 'App\Http\Controllers\SixthBlockHeader' not found in /home/vlovecom/public_html/302/local/app/Http/Controllers/CustomController.php on line 40
 [01-Dec-2016 22:10:18 UTC] PHP Fatal error:  Class 'App\Http\Controllers\SixthBlockHeader' not found in /home/vlovecom/public_html/302/local/app/Http/Controllers/CustomController.php on line 40
+[02-Dec-2016 17:20:17 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/vlovecom/public_html/302/local/storage/framework/views/2175610b2341d5468187ce6c82117a8f1f993a27.php on line 10
+[02-Dec-2016 17:20:53 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/vlovecom/public_html/302/local/storage/framework/views/2175610b2341d5468187ce6c82117a8f1f993a27.php on line 10
+[02-Dec-2016 17:21:59 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/vlovecom/public_html/302/local/storage/framework/views/2175610b2341d5468187ce6c82117a8f1f993a27.php on line 2

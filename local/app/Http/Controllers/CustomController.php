@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Upload;
 
 use App\Http\Requests;
 use App\Models\Landing_header;
@@ -20,8 +21,9 @@ use App\Models\FifthBlockHeader;
 use App\Models\FifthBlockList;
 use App\Models\SixthBlockHeader;
 use App\Models\SixthBlockList;
-use App\Models\Upload;
-
+use App\Models\SeventhBlockList;
+use App\Models\ContactBlockHeader;
+use App\Models\Social_network;
 
 
 class CustomController extends Controller
@@ -45,11 +47,12 @@ class CustomController extends Controller
         $fifthbl = FifthBlockList::all();
         $sixthbh = SixthBlockHeader::all();
         $sixthbl = SixthBlockList::all();
+        $seventhbl = SeventhBlockList::all();
+        $cbh = ContactBlockHeader::all();
+        $sn = Social_network::all();
 
 
-
-
-        return view('custom.index', [
+        return view('custom.app', [
             'images' => $images,
             'homeblock' => $homeblock,
             'fbh' => $fbh,
@@ -66,6 +69,9 @@ class CustomController extends Controller
             'fifthbl' => $fifthbl,
             'sixthbh' => $sixthbh,
             'sixthbl' => $sixthbl,
+            'seventhbl' => $seventhbl,
+            'cbh' => $cbh,
+            'sn' => $sn,
 
 
         ]);

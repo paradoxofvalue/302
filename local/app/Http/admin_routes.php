@@ -138,4 +138,16 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== SixthBlockLists ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/sixthblocklists', 'LA\SixthBlockListsController');
 	Route::get(config('laraadmin.adminRoute') . '/sixthblocklist_dt_ajax', 'LA\SixthBlockListsController@dtajax');
+
+	/* ================== SeventhBlockLists ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/seventhblocklists', 'LA\SeventhBlockListsController');
+	Route::get(config('laraadmin.adminRoute') . '/seventhblocklist_dt_ajax', 'LA\SeventhBlockListsController@dtajax');
+
+	/* ================== ContactBlockHeaders ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/contactblockheaders', 'LA\ContactBlockHeadersController');
+	Route::get(config('laraadmin.adminRoute') . '/contactblockheader_dt_ajax', 'LA\ContactBlockHeadersController@dtajax');
+
+	/* ================== Social_networks ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/social_networks', 'LA\Social_networksController');
+	Route::get(config('laraadmin.adminRoute') . '/social_network_dt_ajax', 'LA\Social_networksController@dtajax');
 });

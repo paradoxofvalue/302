@@ -1,15 +1,14 @@
 <section id="contact" class="gray">
     <div class="container">
         <div class="heading">
-            <div>Связаться с нами</div>
-            <h1>Где вы можете нас найти</h1>
+            <div>{{ $cbh->first()['small_heading'] }}</div>
+
+            <h1>{{ $cbh->first()['big_heading'] }}</h1>
             <div class="divider">
                 <span></span>
             </div>
-            <p class="light-font">Выпускники работают в IT-фирмах, связанных с созданием новых информационных технологий
-                и управляющих систем, участвуют в проектах по реинжинирингу и модернизации компьютерных систем и имеют
-                прекрасные перспективы карьерного роста в сфере информационной поддержки производства и бизнеса в
-                Украине и зарубежом. По специальности ежегодно обучаются свыше 300 студентов.
+            <p class="light-font">
+                {{ $cbh->first()['text'] }}
             </p>
         </div>
         <div class="row">
@@ -17,17 +16,17 @@
                 <i class="fa fa-home fa-2x"></i>
                 <h3>Наш адрес</h3>
 
-                <span class="font-l">ул. Чкалова, 17, г. Харьков, 61070, Украина</span>
+                <span class="font-l">{{ $cbh->first()['address'] }}</span>
             </div>
             <div class="col-md-4 adress-element delay2">
                 <i class="fa fa-comment fa-2x"></i>
                 <h3>Наш e-mail</h3>
-                <span class="font-l">k302@khai.edu</span>
+                <span class="font-l">{{ $cbh->first()['email'] }}</span>
             </div>
             <div class="col-md-4 adress-element delay4">
                 <i class="fa fa-phone fa-2x"></i>
                 <h3>Наш телефон</h3>
-                <span class="font-l">+38 (057) 7884-251</span>
+                <span class="font-l">{{ $cbh->first()['phone'] }}</span>
             </div>
         </div>
     </div>
@@ -35,15 +34,13 @@
         <div class="masked">
             <div class="container">
                 <div class="heading">
-                    <h1 class="light-font">Напишите нам</h1>
+                    <h1 class="light-font">{{ $cbh->first()['form_heading'] }}</h1>
                     <div class="divider">
                         <span></span>
                     </div>
-                    <p class="light-font">Кафедра имеет сорокалетний опыт подготовки специалистов по компьютерным наукам
-                        и информационным технологиям и имеет высококвалифицированный качественный преподавательский
-                        состав, который сформирован на основе созданной  научно-педагогической и учебно-методической
-                        школ. Все преподаватели кафедры имеют научную степень к.т.н. (PhD) и д.т.н., а также звания
-                        доцента и профессора.</p>
+                    <p class="light-font">
+                        {{ $cbh->first()['form_text'] }}
+                    </p>
 
                 </div>
                 <form class="form-horizontal">
@@ -79,18 +76,11 @@
     <div class="container">
         {{--<p>&copy; Copyright <a href="http://graphberry.com?ref=smak">GraphBerry.com</a> 2014 All rights reserved</p>--}}
         <ul class="social-list">
-            <li class="facebook">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li class="twitter">
-                <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li class="dribbble">
-                <a href="#"> <i class="fa fa-dribbble"></i></a>
-            </li>
-            <li class="youtube">
-                <a href="#"><i class="fa fa-youtube"></i></a>
-            </li>
+            @foreach($sn as $item)
+                <li class="{{ $item['name'] }}">
+                    <a href="{{ $item['url'] }}"><i class="fa {{ $item['icon'] }}"></i></a>
+                </li>
+            @endforeach
         </ul>
         <a href="#home" class="square-l goup" style="position: relative">
 					<span>

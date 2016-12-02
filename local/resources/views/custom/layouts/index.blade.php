@@ -1,4 +1,3 @@
-@include('custom.layouts.header')
 
 <section id="home" class="home home-fullscreen">
     <div class="slide text-slider-wrapper">
@@ -367,64 +366,49 @@
     {{--</div>--}}
 </section>
 <section id="branded-section clients">
-    <div class="container">
-        <div class="heading">
-            <div>Наши выпускники</div>
-            <h1>Где работают наши выпускники</h1>
-            <div class="divider">
-                <span></span>
-            </div>
-            <p>Кафедра гордится своими выпускниками, которые сделали карьеру благодаря знаниям, умениям и навыкам, получен-ным во время обучения в ХАИ.</p>
-        </div>
-        <div class="row">
-            <ul class="client-slider clearfix" id="clint-slider">
-                <li><img src="http://vlove.com.ua/302/files/psa8wviiiroymklousn2/datagroup_newlogo.png" alt="" class="grayscale"></li>
-                <li><img src="http://vlove.com.ua/302/files/iyqkdow1wuqa8mljhffn/logo.png" alt="" class="grayscale"></li>
-                <li><img src="http://vlove.com.ua/302/files/wfmyviyoowueebacs9rd/el-logo-02.png" alt="" class="grayscale"></li>
-                <li><img src="http://vlove.com.ua/302/files/psa8wviiiroymklousn2/datagroup_newlogo.png" alt="" class="grayscale"></li>
-                <li><img src="http://vlove.com.ua/302/files/iyqkdow1wuqa8mljhffn/logo.png" alt="" class="grayscale"></li>
-                <li><img src="http://vlove.com.ua/302/files/wfmyviyoowueebacs9rd/el-logo-02.png" alt="" class="grayscale"></li>
-                <li><img src="http://vlove.com.ua/302/files/psa8wviiiroymklousn2/datagroup_newlogo.png" alt="" class="grayscale"></li>
-                <li><img src="http://vlove.com.ua/302/files/iyqkdow1wuqa8mljhffn/logo.png" alt="" class="grayscale"></li>
-                <li><img src="http://vlove.com.ua/302/files/wfmyviyoowueebacs9rd/el-logo-02.png" alt="" class="grayscale"></li>
-            </ul>
-        </div>
-        <ul class="client-nav">
-            <li id="client-prev"></li>
-            <li id="client-next"></li>
-        </ul>
-    </div>
+    {{--<div class="container">--}}
+        {{--<div class="heading">--}}
+            {{--<div>Наши выпускники</div>--}}
+            {{--<h1>Где работают наши выпускники</h1>--}}
+            {{--<div class="divider">--}}
+                {{--<span></span>--}}
+            {{--</div>--}}
+            {{--<p>Кафедра гордится своими выпускниками, которые сделали карьеру благодаря знаниям, умениям и навыкам, получен-ным во время обучения в ХАИ.</p>--}}
+        {{--</div>--}}
+        {{--<div class="row">--}}
+            {{--<ul class="client-slider clearfix" id="clint-slider">--}}
+                {{--<li><img src="http://vlove.com.ua/302/files/psa8wviiiroymklousn2/datagroup_newlogo.png" alt="" class="grayscale"></li>--}}
+                {{--<li><img src="http://vlove.com.ua/302/files/iyqkdow1wuqa8mljhffn/logo.png" alt="" class="grayscale"></li>--}}
+                {{--<li><img src="http://vlove.com.ua/302/files/wfmyviyoowueebacs9rd/el-logo-02.png" alt="" class="grayscale"></li>--}}
+                {{--<li><img src="http://vlove.com.ua/302/files/psa8wviiiroymklousn2/datagroup_newlogo.png" alt="" class="grayscale"></li>--}}
+                {{--<li><img src="http://vlove.com.ua/302/files/iyqkdow1wuqa8mljhffn/logo.png" alt="" class="grayscale"></li>--}}
+                {{--<li><img src="http://vlove.com.ua/302/files/wfmyviyoowueebacs9rd/el-logo-02.png" alt="" class="grayscale"></li>--}}
+                {{--<li><img src="http://vlove.com.ua/302/files/psa8wviiiroymklousn2/datagroup_newlogo.png" alt="" class="grayscale"></li>--}}
+                {{--<li><img src="http://vlove.com.ua/302/files/iyqkdow1wuqa8mljhffn/logo.png" alt="" class="grayscale"></li>--}}
+                {{--<li><img src="http://vlove.com.ua/302/files/wfmyviyoowueebacs9rd/el-logo-02.png" alt="" class="grayscale"></li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+        {{--<ul class="client-nav">--}}
+            {{--<li id="client-prev"></li>--}}
+            {{--<li id="client-next"></li>--}}
+        {{--</ul>--}}
+    {{--</div>--}}
     <div class="branded-section quote">
         <div class="masked">
             <div class="container">
                 <div id="testimonials" class="bxslider clearfix">
-                    <blockquote>
-                        <p>Any man who can drive safely while kissing a pretty girl is simply not giving the kiss the
-                            attention it deserves.</p>
-                        <div class="divider">
-                            <span></span>
-                        </div>
-                        Albert Einstein
-                    </blockquote>
-                    <blockquote>
-                        <p>We keep moving forward, opening new doors, and doing new things, because we're curious and
-                            curiosity keeps leading us down new paths.</p>
-                        <div class="divider">
-                            <span></span>
-                        </div>
-                        Walt Disney
-                    </blockquote>
-                    <blockquote>
-                        <p>You know the golden rule, don’t you boy? Those who have the gold make the rules.</p>
-                        <div class="divider">
-                            <span></span>
-                        </div>
-                        Aladdin
-                    </blockquote>
+                    @foreach($seventhbl as $item)
+                        <blockquote>
+                            <p>{{ $item['text'] }}</p>
+                            <div class="divider">
+                                <span></span>
+                            </div>
+                            {{ $item['name'] }}
+                        </blockquote>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-@include('custom.layouts.footer')
