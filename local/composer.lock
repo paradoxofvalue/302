@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f6caa85055c52c6f2455b5532c14b9fa",
-    "content-hash": "9dc927abc971166b344ad6bd080bce3f",
+    "hash": "3241b781634e14009e8e3ba86b369dbd",
+    "content-hash": "7f1fb0df07051430936d15c256e6099b",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -667,6 +667,47 @@
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
             "time": "2016-05-11 00:36:29"
+        },
+        {
+            "name": "dwij/laeditor",
+            "version": "0.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dwijitsolutions/laeditor.git",
+                "reference": "b9262a22b41cd564952b04997dee35967d45ad86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dwijitsolutions/laeditor/zipball/b9262a22b41cd564952b04997dee35967d45ad86",
+                "reference": "b9262a22b41cd564952b04997dee35967d45ad86",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dwij\\Laeditor\\": "src/"
+                },
+                "files": []
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ganesh Bhosale",
+                    "email": "ganesh@dwij.in"
+                }
+            ],
+            "description": "LAEditor is Code Editor for LaraAdmin which is a Open source Admin Panel for Laravel based Applications & CRM's.",
+            "homepage": "http://laraadmin.com",
+            "keywords": [
+                "admin panel",
+                "code editor",
+                "laraadmin",
+                "laravel"
+            ],
+            "time": "2016-10-20 11:39:33"
         },
         {
             "name": "dwij/laraadmin",
