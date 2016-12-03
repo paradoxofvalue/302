@@ -4,7 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smak -Free Single page html template by GraphBerry</title>
+    <meta name="description" content="{{ LAConfigs::getByKey('site_description') }}">
+    {{--<meta name="author" content="Dwij IT Solutions">--}}
+
+    <meta property="og:title" content="{{ LAConfigs::getByKey('sitename') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ LAConfigs::getByKey('site_description') }}" />
+
+    <meta property="og:url" content="http://laraadmin.com/" />
+    <meta property="og:sitename" content="laraAdmin" />
+    <meta property="og:image" content="http://demo.adminlte.acacha.org/img/LaraAdmin-600x600.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    {{--<meta name="twitter:site" content="@laraadmin" />--}}
+    {{--<meta name="twitter:creator" content="@laraadmin" />--}}
+
+    <title>{{ LAConfigs::getByKey('sitename') }}</title>
+
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="{{ URL::asset('custom-assets/css/bootstrap.css') }}">
@@ -37,12 +53,21 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right animate">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#clients">Clients</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#services">Должности</a></li>
+                    {{--<li><a href="#portfolio">Учебные планы</a></li>--}}
+                    {{--<li><a href="#about">Кем работать</a></li>--}}
+                    <li><a href="#clients">Предподаватели</a></li>
+                    <li><a href="#spec">Специальности</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                    {{--<ul class="nav navbar-nav navbar-right">--}}
+                        {{--@if (Auth::guest())--}}
+                            {{--<li><a href="{{ url('/login') }}">Login</a></li>--}}
+                        {{--<!--<li><a href="{{ url('/register') }}">Register</a></li>-->--}}
+                        {{--@else--}}
+                            {{--<li><a href="{{ url(config('laraadmin.adminRoute')) }}">{{ Auth::user()->name }}</a></li>--}}
+                        {{--@endif--}}
+                    {{--</ul>--}}
                 </ul>
             </div>
             <!--/.nav-collapse -->

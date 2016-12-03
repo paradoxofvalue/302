@@ -44,7 +44,7 @@
 
         </div>
     </div>
-    <div class="branded-section process">
+    <div class="branded-section process" id="portfolio">
         <div class="masked">
             <div class="container">
                 <div class="heading">
@@ -68,7 +68,7 @@
         </div>
     </div>
 </section>
-<section class="portfolio" id="portfolio">
+<section class="portfolio" id="about">
     <div class="container">
         <div class="heading">
             <div>{{ $tbh->first()['small_heading'] }}</div>
@@ -234,7 +234,7 @@
     {{--</li>--}}
     {{--</ul>--}}
     {{--</div>--}}
-    <div class="container">
+    <div class="container" >
         <div class="heading">
             <h1>{{ $tblink->first()['heading'] }}</h1>
             <p>{{ $tblink->first()['decription'] }}</p>
@@ -243,7 +243,7 @@
             <a href="{{ $tblink->first()['link'] }}" class="btn btn-primary">{{ $tblink->first()['buttonName'] }}</a>
         </div>
     </div>
-    <div class="branded-section numbers">
+    <div class="branded-section numbers" id="clients">
         <div class="masked">
             <div class="container">
                 <div class="heading">
@@ -270,7 +270,7 @@
         </div>
     </div>
 </section>
-<section id="about">
+<section id="spec">
     <div class="container">
         <div class="heading">
             <div>{{ $fifthbh->first()['small_heading'] }}</div>
@@ -292,7 +292,7 @@
             @endforeach
         </div>
     </div>
-    <div class="gray">
+    <div class="gray" id="clients" >
         <div class="container">
             <div class="heading">
                 <div>{{ $sixthbh->first()['small_heading'] }}</div>
